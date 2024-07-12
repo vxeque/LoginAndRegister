@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Carros</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .car-info {
+        font-size: 18px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista de Carros</h1>
+    <h2>Panel administrativo</h2>
+    <ul>
+      <% cars.forEach(function(car) { %>
+      <li>
+        <h2><%= car.marca %> <%= car.modelo %></h2>
+        <div class="car-info">
+          <p><strong>Año:</strong> <%= car.anio %></p>
+          <p><strong>Color:</strong> <%= car.color %></p>
+          <p><strong>Motor:</strong> <%= car.motor %></p>
+          <p><strong>Precio:</strong> <%= car.precio %></p>
+        </div>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
